@@ -89,8 +89,8 @@ jobs:
       - name: Login to Docker
         uses: docker/login-action@v2
         with:
-          username: vbayko
-          password: JlOv3bJ-5z
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
@@ -109,8 +109,8 @@ jobs:
       - name: Login to Docker
         uses: docker/login-action@v2
         with:
-          username: vbayko
-          password: JlOv3bJ-5z
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
